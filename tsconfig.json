@@ -71,6 +71,24 @@
       ],
       "@libs/tasks/*": [
         "libs/tasks/src/*"
+      ],
+      "@libs/task-update-history": [
+        "libs/task-update-history/src"
+      ],
+      "@libs/task-update-history/*": [
+        "libs/task-update-history/src/*"
+      ],
+      "@libs/task-eta-update-history": [
+        "libs/task-eta-update-history/src"
+      ],
+      "@libs/task-eta-update-history/*": [
+        "libs/task-eta-update-history/src/*"
+      ],
+      "@libs/task-status-update-history": [
+        "libs/task-status-update-history/src"
+      ],
+      "@libs/task-status-update-history/*": [
+        "libs/task-status-update-history/src/*"
       ]
     }
   },

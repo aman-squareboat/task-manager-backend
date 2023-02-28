@@ -115,6 +115,33 @@
       "compilerOptions": {
         "tsConfigPath": "libs/tasks/tsconfig.lib.json"
       }
+    },
+    "task-update-history": {
+      "type": "library",
+      "root": "libs/task-update-history",
+      "entryFile": "index",
+      "sourceRoot": "libs/task-update-history/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/task-update-history/tsconfig.lib.json"
+      }
+    },
+    "task-eta-update-history": {
+      "type": "library",
+      "root": "libs/task-eta-update-history",
+      "entryFile": "index",
+      "sourceRoot": "libs/task-eta-update-history/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/task-eta-update-history/tsconfig.lib.json"
+      }
+    },
+    "task-status-update-history": {
+      "type": "library",
+      "root": "libs/task-status-update-history",
+      "entryFile": "index",
+      "sourceRoot": "libs/task-status-update-history/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/task-status-update-history/tsconfig.lib.json"
+      }
     }
   }
 }

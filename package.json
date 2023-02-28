@@ -167,7 +167,10 @@
       "^libs/auth(|/.*)$": "<rootDir>/libs/auth/src/$1",
       "^libs/jobs(|/.*)$": "<rootDir>/libs/jobs/src/$1",
       "^libs/applications(|/.*)$": "<rootDir>/libs/applications/src/$1",
-      "^@libs/tasks(|/.*)$": "<rootDir>/libs/tasks/src/$1"
+      "^@libs/tasks(|/.*)$": "<rootDir>/libs/tasks/src/$1",
+      "^@libs/task-update-history(|/.*)$": "<rootDir>/libs/task-update-history/src/$1",
+      "^@libs/task-eta-update-history(|/.*)$": "<rootDir>/libs/task-eta-update-history/src/$1",
+      "^@libs/task-status-update-history(|/.*)$": "<rootDir>/libs/task-status-update-history/src/$1"
     }
   }
 }
