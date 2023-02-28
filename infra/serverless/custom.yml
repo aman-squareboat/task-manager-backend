@@ -1,0 +1,15 @@
+webpack:
+  webpackConfig: webpack.config.js
+  excludeRegex: \.ts|test|\.map
+  keepOutputDirectory: true
+  includeModules:
+    forceExclude:
+      - aws-sdk
+    forceInclude:
+      - knex
+      - pg
+  packager: npm
+  packagerOptions:
+    scripts:
+      - rm -rf node_modules/sharp
+      - npm install --arch=x64 --platform=linux sharp

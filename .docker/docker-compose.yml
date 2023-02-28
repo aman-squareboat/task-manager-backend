@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:
+  postgres:
+    container_name: tm_database
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER:-admin}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-admin@tm}
+      POSTGRES_DB: ${DB_DATABASE:-tm_db}
+      PGDATA: /data/postgres
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - ./data/postgres/:/data/postgres
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    networks:
+      - tm-network
+  
+  redis:
+    image: redis
+    container_name: tm_cache
+    command: bash -c "redis-server --appendonly yes"
+    volumes:
+      - ./data/redis:/data
+    ports:
+      - 6380:6379
+    restart: always
+
+networks:
+  tm-network:
+    driver: bridge

@@ -1,0 +1,81 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "paths": {
+      "@app/*": [
+        "src/*"
+      ],
+      "@config/*": [
+        "config/*"
+      ],
+      "@libs/boat": [
+        "libs/boat/src"
+      ],
+      "@libs/boat/*": [
+        "libs/boat/src/*"
+      ],
+      "@libs/database": [
+        "libs/database/src"
+      ],
+      "@libs/database/*": [
+        "libs/database/src/*"
+      ],
+      "@libs/mailman": [
+        "libs/mailman/src"
+      ],
+      "@libs/mailman/*": [
+        "libs/mailman/src/*"
+      ],
+      "@libs/users": [
+        "libs/users/src"
+      ],
+      "@libs/users/*": [
+        "libs/users/src/*"
+      ],
+      "@libs/common": [
+        "libs/common/src"
+      ],
+      "@libs/common/*": [
+        "libs/common/src/*"
+      ],
+      "libs/auth": [
+        "libs/auth/src"
+      ],
+      "libs/auth/*": [
+        "libs/auth/src/*"
+      ],
+      "libs/jobs": [
+        "libs/jobs/src"
+      ],
+      "libs/jobs/*": [
+        "libs/jobs/src/*"
+      ],
+      "libs/applications": [
+        "libs/applications/src"
+      ],
+      "libs/applications/*": [
+        "libs/applications/src/*"
+      ],
+      "@libs/tasks": [
+        "libs/tasks/src"
+      ],
+      "@libs/tasks/*": [
+        "libs/tasks/src/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

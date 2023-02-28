@@ -1,0 +1,120 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/rest/src",
+  "monorepo": true,
+  "root": "apps/rest",
+  "compilerOptions": {
+    "webpack": false,
+    "tsConfigPath": "apps/rest/tsconfig.app.json"
+  },
+  "projects": {
+    "boat": {
+      "type": "library",
+      "root": "libs/boat",
+      "entryFile": "index",
+      "sourceRoot": "libs/boat/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/boat/tsconfig.lib.json"
+      }
+    },
+    "nestjs-boilerplate": {
+      "type": "application",
+      "root": "apps/nestjs-boilerplate",
+      "entryFile": "main",
+      "sourceRoot": "apps/nestjs-boilerplate/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nestjs-boilerplate/tsconfig.app.json"
+      }
+    },
+    "rest": {
+      "type": "application",
+      "root": "apps/rest",
+      "entryFile": "main",
+      "sourceRoot": "apps/rest/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/rest/tsconfig.app.json"
+      }
+    },
+    "database": {
+      "type": "library",
+      "root": "libs/database",
+      "entryFile": "index",
+      "sourceRoot": "libs/database/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/database/tsconfig.lib.json"
+      }
+    },
+    "mailman": {
+      "type": "library",
+      "root": "libs/mailman",
+      "entryFile": "index",
+      "sourceRoot": "libs/mailman/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/mailman/tsconfig.lib.json"
+      }
+    },
+    "auth-apis": {
+      "type": "application",
+      "root": "apps/auth-apis",
+      "entryFile": "main",
+      "sourceRoot": "apps/auth-apis/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/auth-apis/tsconfig.app.json"
+      }
+    },
+    "users": {
+      "type": "library",
+      "root": "libs/users",
+      "entryFile": "index",
+      "sourceRoot": "libs/users/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/users/tsconfig.lib.json"
+      }
+    },
+    "common": {
+      "type": "library",
+      "root": "libs/common",
+      "entryFile": "index",
+      "sourceRoot": "libs/common/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/common/tsconfig.lib.json"
+      }
+    },
+    "auth": {
+      "type": "library",
+      "root": "libs/auth",
+      "entryFile": "index",
+      "sourceRoot": "libs/auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/auth/tsconfig.lib.json"
+      }
+    },
+    "jobs": {
+      "type": "library",
+      "root": "libs/jobs",
+      "entryFile": "index",
+      "sourceRoot": "libs/jobs/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/jobs/tsconfig.lib.json"
+      }
+    },
+    "applications": {
+      "type": "library",
+      "root": "libs/applications",
+      "entryFile": "index",
+      "sourceRoot": "libs/applications/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/applications/tsconfig.lib.json"
+      }
+    },
+    "tasks": {
+      "type": "library",
+      "root": "libs/tasks",
+      "entryFile": "index",
+      "sourceRoot": "libs/tasks/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/tasks/tsconfig.lib.json"
+      }
+    }
+  }
+}
