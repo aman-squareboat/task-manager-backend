@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/squareboat/nestjs-boilerplate",
   "scripts": {
+    "start": "node dist/apps/rest/src/main.js",
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"apps/**/*.ts\" \"libs/**/*.ts\"",
