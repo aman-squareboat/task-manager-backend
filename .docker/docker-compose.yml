@@ -14,7 +14,7 @@ services:
     volumes:
       - ./data/postgres/:/data/postgres
     ports:
-      - "${DB_PORT:-5432}:5432"
+      - "${DB_PORT:-54320}:54320"
     networks:
       - tm-network
   
