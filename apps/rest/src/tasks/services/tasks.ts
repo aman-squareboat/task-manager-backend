@@ -41,7 +41,7 @@ export class TasksApiService {
       { ulid: input.id },
       { eta: input.eta, status: input.status },
     );
-    if (input.status || (input.status == 0 && task.status != input.status))
+    if (input.status >= 0 && task.status !== input.status)
       this.taskStatusUpdateHistoryLibService.repo.create({
         ulid: ulid(),
         taskId: task.id,
@@ -49,7 +49,8 @@ export class TasksApiService {
         updatedToStatus: input.status,
         updatedAt: new Date().toISOString(),
       });
-    if (input.eta && task.eta != input.eta)
+
+    if (input.eta && new Date(task.eta).toISOString() !== input.eta)
       this.taskEtaUpdateHistoryLibService.repo.create({
         ulid: ulid(),
         taskId: task.id,

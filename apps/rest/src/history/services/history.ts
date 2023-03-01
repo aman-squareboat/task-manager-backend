@@ -13,14 +13,12 @@ export class HistoryApiService {
   ) {}
   async getStatusUpdateHistoryById(input: GetTaskUpdateHistoryById) {
     let task = await this.taskLibService.repo.firstWhere({ ulid: input.id });
-    return await this.taskStatusUpdateHistory.repo
-      .query()
-      .paginate(input.pageNumber, input.perPage);
+    return await this.taskStatusUpdateHistory.repo.getWhere({
+      taskId: task.id,
+    });
   }
   async getEtaUpdateHistoryById(input: GetTaskUpdateHistoryById) {
     let task = await this.taskLibService.repo.firstWhere({ ulid: input.id });
-    return await this.taskEtaUpdateHistory.repo
-      .query()
-      .paginate(input.pageNumber, input.perPage);
+    return await this.taskEtaUpdateHistory.repo.getWhere({ taskId: task.id });
   }
 }

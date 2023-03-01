@@ -1,5 +1,6 @@
 import { Request, Response, RestController } from '@libs/boat';
 import { Dto, Validate } from '@libs/boat/validator';
+import { PaginateTasksTransformer } from '@libs/common';
 import { Controller, Get, Post, Put, Req, Res } from '@nestjs/common';
 import { extend } from 'lodash';
 import { TasksApiService } from '../services';
@@ -23,7 +24,9 @@ export class TasksController extends RestController {
     @Res() res: Response,
   ) {
     let tasks = await this.service.getPaginatedTasks(dto);
-    return res.success({ tasks });
+    return res.success(
+      await this.transform(tasks, new PaginateTasksTransformer(), { req }),
+    );
   }
 
   @Get(':id')

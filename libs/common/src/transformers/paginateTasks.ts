@@ -1,8 +1,8 @@
 import { Transformer } from '@libs/boat';
 import { access } from 'fs';
-import { IUserModel } from '../interfaces';
+import { ITaskModel, IUserModel } from '../interfaces';
 
-interface PaginatedUsers {
+interface PaginatedTasks {
   pagination: {
     currentPage: number;
     totalPage: number;
@@ -11,15 +11,14 @@ interface PaginatedUsers {
     count: number;
   };
   data: {
-    id: number;
-    name: string;
-    email: string;
-    roleId: number;
+    id: string;
+    eta: string;
+    title: string;
     status: number;
   }[];
 }
-export class PaginateUsersTransformer extends Transformer {
-  async transform(paginatedUsers: {
+export class PaginateTasksTransformer extends Transformer {
+  async transform(paginatedTasks: {
     pagination: {
       currentPage: number;
       totalPage: number;
@@ -27,16 +26,15 @@ export class PaginateUsersTransformer extends Transformer {
       total: number;
       count: number;
     };
-    data: IUserModel[];
-  }): Promise<PaginatedUsers> {
-    let pagination = paginatedUsers.pagination;
-    let data = paginatedUsers.data.map((user) => {
+    data: ITaskModel[];
+  }): Promise<PaginatedTasks> {
+    let pagination = paginatedTasks.pagination;
+    let data = paginatedTasks.data.map((task) => {
       return {
-        id: user.id,
-        name: user.name,
-        email: user.email,
-        roleId: user.roleId,
-        status: user.status,
+        id: task.ulid,
+        eta: task.eta,
+        title: task.title,
+        status: task.status,
       };
     });
     return {
