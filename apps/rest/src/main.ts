@@ -1,7 +1,7 @@
-import { RestServer } from "@libs/boat";
-import { AppModule } from "./module";
+import { RestServer } from '@libs/boat';
+import { AppModule } from './module';
 
 RestServer.make(AppModule, {
   addValidationContainer: true,
-  port: 3000
-})
+  port: +process.env.APP_PORT,
+});
